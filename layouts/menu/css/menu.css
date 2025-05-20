@@ -1,0 +1,13 @@
+/*MENÚ NAVIGATION*/
+
+    nav{
+        background-color: rgb(220, 220, 221);
+        padding: 20px;
+        display: flex;
+        justify-content: end;
+        gap: 70px;
+    }
+
+    nav a{
+        text-decoration: none;
+    }

@@ -1,0 +1,68 @@
+#main-container{
+    background-color: aliceblue;
+    padding: 20px;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex-wrap: wrap;
+}
+
+/*FOTO PERFIL*/
+
+    img{
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        box-shadow: 4px 2px 2px 2px rgb(29, 213, 219);
+    }
+
+
+/*DESCRIPCIÓN*/
+
+    #desc-resumen-content{
+        width: 60%;
+    }
+
+    /*QUIÉN SOY*/
+
+        #IAM-content{
+            padding: 2px;
+            text-align: start;
+        }
+
+        #IAM-content h1{
+            margin: 0;
+            font-size: 45px;
+        }
+
+        #IAM-content span{
+            margin-top: 2px;
+            font-size: 20px;
+        }
+
+        #IAM-content p{
+            font-size: 20px;
+            text-align: justify;
+        }
+
+    
+    /*RESUMEN*/
+
+        #resumen-content{
+            margin-top: 20px;
+            padding: 2px;
+        }
+
+        #resumen-content h4{
+            margin: 0;
+            font-size: 20px;
+        }
+
+        #resumen-content p{
+            margin: 0;
+            font-size: 20px;
+            text-align: justify;
+        }
