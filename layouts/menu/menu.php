@@ -6,14 +6,17 @@
     <title>Document</title>
 
     <!--Link archivo CSS-->
-    <link rel="stylesheet" href="layouts/menu/css/menu.css">
+    <link rel="stylesheet" href="layouts/menu/menu.css">
 </head>
 <body>
 
     <!--MENÚ NAVIGATION-->
+    
 
     <nav>
         <a href="#inicio">INICIO</a>
+        <a href="#sobre_mi">SOBRE MÍ</a>
+        <a href="">TECNOLOGÍAS</a>
         <a href="">TRAYECTORIA</a>
         <a href="">PROYECTOS</a>
         <a href="">CONTACTO</a>

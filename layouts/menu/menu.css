@@ -1,7 +1,7 @@
 /*MENÚ NAVIGATION*/
 
     nav{
-        background-color: rgb(220, 220, 221);
+        background-color: #001D46;
         padding: 20px;
         display: flex;
         justify-content: end;
@@ -10,4 +10,5 @@
 
     nav a{
         text-decoration: none;
+        color: rgb(33, 218, 178);
     }

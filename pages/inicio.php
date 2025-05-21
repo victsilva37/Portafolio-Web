@@ -1,1 +1,1 @@
-<?php include 'components/inicio/php/resumen.php'?>
+<?php include 'components/inicio/resumen.php'?>
