@@ -1,0 +1,42 @@
+/*TÍTULO*/
+
+    /*sin contenido*/
+
+
+/*CONTENIDO*/
+
+    #tec-back-content{
+        background-color: #093d85;
+        width: 30%;
+        height: auto;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); 
+        gap: 20px;
+    }
+
+    .card-tecno-back{
+        background-color: #448eb1;
+        width: 75px;
+        height: 100px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-tecno-back #img_tecno{
+        max-width: 75px;
+        max-height: 75px;
+    }
+
+    .card-tecno-back h3{
+        text-align: center;
+        margin: 0;
+        font-size: 13px;
+        color: white;
+    }
+
+
+/*PAGINATION*/
+
+    /*sin contenido*/

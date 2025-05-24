@@ -14,7 +14,7 @@
 
         <!--FOTO PERFIL-->
 
-            <img  src="assets/inicio/img/img1_foto_perfil.jpg" alt="">
+            <img id="logo_perfil" src="assets/inicio/img/img1_foto_perfil.jpg" alt="">
 
             <br>
             

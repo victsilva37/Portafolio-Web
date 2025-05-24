@@ -16,7 +16,7 @@
     <nav>
         <a href="#inicio">INICIO</a>
         <a href="#sobre_mi">SOBRE MÍ</a>
-        <a href="">TECNOLOGÍAS</a>
+        <a href="#tecnologias">TECNOLOGÍAS</a>
         <a href="">TRAYECTORIA</a>
         <a href="">PROYECTOS</a>
         <a href="">CONTACTO</a>

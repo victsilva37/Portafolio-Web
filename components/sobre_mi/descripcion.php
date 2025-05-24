@@ -13,7 +13,7 @@
 
         <h1>Sobre mí</h1>
 
-        <p>Soy egresado de la carrera de Ingeniería en Informática en el instituto profesional de Duoc UC en Chile, 
+        <p>Soy egresado de la carrera de Ingeniería en Informática en el instituto profesional de Duoc UC en Melipilla, Chile, 
             con una sólida formación en desarrollo de software, 
             diseño de sistemas y especialización en Ciencia de Datos. Durante mi carrera, 
             adquirí experiencia en lenguajes de programación como Python, JavaScript y SQL, 
