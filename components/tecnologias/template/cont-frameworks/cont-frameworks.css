@@ -5,17 +5,18 @@
 
 /*CONTENIDO*/
 
-    #tec-back-content{
+    #tec-frame-content{
         background-color: #093d85;
         width: 30%;
         height: auto;
         margin: auto;
-        display: grid;
+        display: flex;
         grid-template-columns: repeat(5, 1fr); 
+        justify-content: space-around;
         gap: 20px;
     }
 
-    .card-tecno-back{
+    .card-tecno-frame{
         background-color: #448eb1;
         width: 75px;
         height: 100px;
@@ -24,15 +25,15 @@
         flex-direction: column;
     }
 
-    .card-tecno-back #img_tecno{
+    .card-tecno-frame #img_tecno{
         max-width: 75px;
         max-height: 75px;
     }
 
-    .card-tecno-back h3{
+    .card-tecno-frame h3{
         text-align: center;
         margin: 0;
-        font-size: 13px;
+        font-size: 10px;
         color: white;
     }
 

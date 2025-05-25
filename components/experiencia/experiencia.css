@@ -1,0 +1,57 @@
+#exp-main-container{
+    background-color: #001D46;
+    padding: 20px;
+}
+
+#exp-main-container h1{
+    color: azure;
+    text-align: center;
+}
+
+#exp-content{
+    width: 40%;
+    margin: auto;
+}
+
+/*SECCIÓN INFO EXPERIENCIA*/
+
+    #exp-content h4{
+        color: azure;
+        text-align: start;
+        margin: 0;
+    }
+
+    #exp-content p{
+        color: rgb(26, 214, 214);
+        text-align: justify;
+    }
+
+    #exp-content small{
+        color: rgb(210, 226, 226);
+        text-align: start;
+    }
+
+        .exp-item{
+            background-color: #0c4596;
+            padding: 10px;
+        }
+
+
+/*SECCIÓN TECNOLOGÍAS*/
+
+    #tec-exp{
+        display: flex;
+        justify-content: space-between;
+        color: azure;
+    }
+
+    #tec-exp ul{
+        display: flex;
+        justify-content: start;
+        gap: 25px;
+        color: azure;
+        list-style: none;
+    }
+
+
+

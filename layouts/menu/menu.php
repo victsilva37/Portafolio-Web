@@ -17,7 +17,8 @@
         <a href="#inicio">INICIO</a>
         <a href="#sobre_mi">SOBRE MÍ</a>
         <a href="#tecnologias">TECNOLOGÍAS</a>
-        <a href="#trayectoria">TRAYECTORIA</a>
+        <a href="#experiencia">EXPERIENCIA</a>
+        <a href="#formacion">FORMACIÓN</a>
         <a href="">PROYECTOS</a>
         <a href="">CONTACTO</a>
     </nav>

@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--LInk archivo CSS-->
-    <link rel="stylesheet" href="components/tecnologias/template/cont-backend/cont-backend.css">
+    <link rel="stylesheet" href="components/tecnologias/template/cont-frameworks/cont-frameworks.css">
 
 </head>
 <body>
 
     <!--TÍTULO-->
 
-        <h4>Backend</h4>
+        <h4>Frameworks & Librerías</h4>
 
 
     <!--CONTENIDO-->
 
-        <div id="tec-back-content">
+        <div id="tec-frame-content">
             <?php
-            $_GET['tipo'] = 'Backend';
+            $_GET['tipo'] = 'Framework/Librería';
             include 'components/tecnologias/server/cargar_tecnologias.php';
 
             // Paginación para Backend
             $totalItems = count($tecnologias);
             $totalPages = ceil($totalItems / $itemsPerPage);
-            $currentPage = isset($_GET['page_backend']) ? max(1, min((int)$_GET['page_backend'], $totalPages)) : 1;
+            $currentPage = isset($_GET['page_frame']) ? max(1, min((int)$_GET['page_backend'], $totalPages)) : 1;
 
             $startIndex = ($currentPage - 1) * $itemsPerPage;
             $paginatedBackend = array_slice($tecnologias, $startIndex, $itemsPerPage);
@@ -33,7 +33,7 @@
 
             <?php if (!empty($paginatedBackend)): ?>
                 <?php foreach ($paginatedBackend as $tec): ?>
-                    <div class="card-tecno-back">
+                    <div class="card-tecno-frame">
                         <img id="img_tecno" src="assets/<?= $tec['icono'] ?>" alt="<?= $tec['nombre_tecnologia'] ?> icono">
                         <h3><?= $tec['nombre_tecnologia'] ?></h3>
                     </div>
@@ -47,11 +47,11 @@
 
         <!-- Paginación para Backend -->
         <?php if ($totalPages > 1): ?>
-            <nav id="nav-backend">
+            <nav id="nav-frame">
                 <ul class="pagination justify-content-center">
                     <?php for ($i = 1; $i <= $totalPages; $i++): ?>
                         <li class="page-item <?= $i == $currentPage ? 'active' : '' ?>">
-                            <a class="page-link" href="?tipo=Backend&page_backend=<?= $i ?>"><?= $i ?></a>
+                            <a class="page-link" href="?tipo=Frame&page_frame=<?= $i ?>"><?= $i ?></a>
                         </li>
                     <?php endfor; ?>
                 </ul>

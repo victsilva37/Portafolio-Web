@@ -24,8 +24,8 @@
             <?php include 'components/tecnologias/tecnologias.php'?>
         </section>
 
-        <section id="trayectoria">
-            <?php include 'components/trayectoria/trayectoria.php'?>
+        <section id="experiencia">
+            <?php include 'components/experiencia/experiencia.php'?>
         </section>
 
 

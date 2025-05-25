@@ -13,20 +13,24 @@
         <h1>Tecnologías</h1>
         <br>
 
-        <!--Template: CONT-FRONTEND-->
-        <?php include 'template/cont-frontend/cont-frontend.php'?>
+        <!--Template: CONT-LENGUAJES-->
+        <?php include 'template/cont-lenguajes/cont-lenguajes.php'?>
         <br><br>
 
-        <!--Template: CONT-BACKEND-->
-        <?php include 'template/cont-backend/cont-backend.php'?>
-        <br><br>
+        <!--Template: CONT-FRAMEWORKS-->
+        <?php include 'template/cont-frameworks/cont-frameworks.php'?>
+        <br><br> 
 
         <!--Template: CONT-BASE-DATOS-->
         <?php include 'template/cont-base-datos/cont-base-datos.php'?>
         <br><br>
 
-        <!--Template: DEVOPS-->
+        <!--Template: CONT-DEVOPS-->
         <?php include 'template/cont-devops/cont-devops.php'?>
+        <br><br>
+
+        <!--Template: CONT-HERRAMIENTAS-->
+        <?php include 'template/cont-herramientas/cont-herramientas.php'?>
         <br><br>
 
     </div>

@@ -12,7 +12,7 @@
 
     <!--TÍTULO-->
 
-        <h4>Base de datos</h4>
+        <h4>Bases de datos</h4>
 
 
     <!--CONTENIDO-->
