@@ -19,8 +19,7 @@
         <a href="#tecnologias">TECNOLOGÍAS</a>
         <a href="#experiencia">EXPERIENCIA</a>
         <a href="#formacion">FORMACIÓN</a>
-        <a href="">PROYECTOS</a>
-        <a href="">CONTACTO</a>
+        <a href="#proyectos">PROYECTOS</a>
     </nav>
 
 </body>

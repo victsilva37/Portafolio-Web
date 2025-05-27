@@ -1,0 +1,47 @@
+#form-main-container{
+    background-color: #001D46;
+    padding: 20px;
+}
+
+#form-main-container h1{
+    color: azure;
+    text-align: center;
+}
+
+#form-main-container .form-item{
+    background-color: #0f4da3;
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+}
+
+/*NOMBRE DE LA FORMACIÓN*/
+
+    .form-item h4{
+        color: azure;
+    }
+
+
+/*SEDE Y FECHAS*/
+
+    .form-item small{
+        color: rgb(210, 226, 226);
+    }
+
+
+/*DESCRIPCIÓN E IMAGEN*/
+
+    .form-logo{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form-logo p{
+        color: rgb(26, 214, 214); 
+        text-align: justify;
+        width: 70%;
+    }
+
+    .form-logo img{
+        max-height: 150px;
+    }

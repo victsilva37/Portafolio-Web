@@ -1,0 +1,144 @@
+#proy-main-container{
+    background-color: #001D46;
+}
+
+#proy-main-container h1{
+    color: azure;
+    text-align: center;
+}
+
+#proy-main-container #proyectos-content{
+    background-color: #0f4da3;
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 20fr);
+    gap: 10px;
+
+}
+
+
+/*TARJETAS DE PROYECTOS*/
+
+    .proyecto-item{
+        width: 100%;
+        padding: 10px;
+        max-height: 700px;
+        
+        
+    }
+
+    /* Estados */
+    .proyecto-item.en_carpeta {
+        background-color: #1d13b1;
+        border: 8px solid gray;
+        filter: grayscale(100%);
+        pointer-events: none;
+        opacity: 0.5;
+        -webkit-filter: grayscale(100%);
+}
+
+    @keyframes border-glow {
+        0% {
+            border-color: #1572ca;
+        }
+        33% {
+            border-color: #23b4e0;
+        }
+        66% {
+            border-color: #578fa5;
+        }
+        100% {
+            border-color: #1572ca;
+        }
+    }
+
+    .proyecto-item.en_desarrollo {
+        background-color: #230770;
+        border: 8px solid transparent;
+        animation: border-glow 2.5s linear infinite;
+        -webkit-animation: border-glow 2.5s linear infinite;
+    }
+
+    /*BANNER DEL PROYECTO*/
+
+        #banner_img_proyecto{
+            background-color: red;
+            margin: 0;
+            padding: 0;
+        }
+
+        #banner_img_proyecto img{
+            width: 100%;
+            max-height: 200px;
+            image-rendering: auto;
+        }
+
+
+    /*INFORMACIÓN DEL PROYECTO*/
+
+        .proyecto-item h4{
+            color: azure;
+            text-align: center;
+        }
+
+        .proyecto-item p{
+            color: rgb(26, 214, 214); 
+            text-align: justify;
+        }
+
+    /*TECNOLOGÍAS DEL PROYECTO*/
+
+        #tec-pro{
+            display: flex;
+            justify-content: space-around;
+            align-self: center;
+        }
+
+        #tec-pro li{
+            display: flex;
+            list-style: none;
+            font-size: 10px;
+            color: azure;
+        }
+
+        #tec-pro img{
+            max-width: 30px;
+            max-height: 30px
+        }
+
+
+    /*LINK DE REPOSITORIO*/
+
+        /* Contenedor del enlace */
+        #a-link-repo {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Estilo base del enlace */
+        #a-link-repo a {
+            color: azure;
+            text-decoration: none;
+            background-image: linear-gradient(90deg, azure, rgb(25, 221, 211));
+            background-size: 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            transition: background-position 0.3s ease-in-out;
+        }
+
+        /* Animación en hover */
+        #a-link-repo a:hover {
+            background-position: -100% 0; /* Desplaza el degradado hacia la izquierda */
+        }
+
+        #a-link-repo a:blank {
+            background-position: 0 -100%; /* Desplaza el degradado hacia la izquierda */
+        }
+
+        #a-link-repo a:active{
+            color: rgb(14, 239, 255)
+        }
