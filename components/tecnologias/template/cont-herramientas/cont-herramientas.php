@@ -17,7 +17,7 @@
 
     <!--CONTENIDO-->
 
-        <div id="tec-leng-content">
+        <div id="tec-her-content">
             <?php
             $_GET['tipo'] = 'Herramienta';
             include 'components/tecnologias/server/cargar_tecnologias.php';
@@ -34,7 +34,7 @@
 
             <?php if (!empty($paginatedHerramienta)): ?>
                 <?php foreach ($paginatedHerramienta as $tec): ?>
-                    <div class="card-tecno-leng">
+                    <div class="card-tecno-her">
                         <img id="img_tecno" src="assets/<?= $tec['icono'] ?>" alt="<?= $tec['nombre_tecnologia'] ?> icono">
                         <h3><?= $tec['nombre_tecnologia'] ?></h3>
                     </div>

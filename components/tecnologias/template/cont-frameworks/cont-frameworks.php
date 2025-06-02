@@ -46,17 +46,7 @@
     <!--PAGINATION-->
 
         <!-- Paginación para Backend -->
-        <?php if ($totalPages > 1): ?>
-            <nav id="nav-frame">
-                <ul class="pagination justify-content-center">
-                    <?php for ($i = 1; $i <= $totalPages; $i++): ?>
-                        <li class="page-item <?= $i == $currentPage ? 'active' : '' ?>">
-                            <a class="page-link" href="?tipo=Frame&page_frame=<?= $i ?>"><?= $i ?></a>
-                        </li>
-                    <?php endfor; ?>
-                </ul>
-            </nav>
-        <?php endif; ?>
+  
 
     
 </body>

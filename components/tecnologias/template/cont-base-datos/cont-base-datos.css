@@ -12,6 +12,8 @@
         display: flex;
         grid-template-columns: repeat(5, 1fr); 
         justify-content: space-around;
+        flex-wrap: wrap;
+        justify-content: stretch;
         gap: 20px;
     }
 
