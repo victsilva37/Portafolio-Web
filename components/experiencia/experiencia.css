@@ -11,7 +11,14 @@
 #exp-content{
     width: 40%;
     margin: auto;
+    flex-wrap: wrap;
 }
+
+ @media (max-width: 768px) {
+    #exp-content{
+        width: 70%;
+    }
+ }
 
 /*SECCIÓN INFO EXPERIENCIA*/
 
@@ -43,6 +50,7 @@
         display: flex;
         justify-content: space-between;
         color: azure;
+        flex-wrap: wrap;
     }
 
     #tec-exp ul{
@@ -51,7 +59,19 @@
         gap: 25px;
         color: azure;
         list-style: none;
+        flex-wrap: wrap;
     }
+
+     @media (max-width: 768px) {
+        #tec-exp ul li p{
+            display: none;
+        }
+
+        #tec-exp ul li img{
+            width: 100px;
+            height: 100px;
+        }
+     }
 
 
 

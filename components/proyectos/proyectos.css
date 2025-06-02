@@ -12,21 +12,32 @@
     width: 70%;
     margin: auto;
     padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 20fr);
-    gap: 10px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;  
+}
 
+@media (max-width: 768px){
+    #proy-main-container #proyectos-content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }
 
 
 /*TARJETAS DE PROYECTOS*/
 
     .proyecto-item{
-        width: 100%;
+        width: 30%;
         padding: 10px;
-        max-height: 700px;
-        
-        
+        max-height: 700px; 
+    }
+
+    @media (max-width:768px){
+        .proyecto-item{
+            width: 100%;
+        }
     }
 
     /* Estados */

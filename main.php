@@ -12,12 +12,14 @@
     
     <?php include 'layouts/menu/menu.php'?>
 
+    <?php include 'layouts/sidebar/sidebar.php'?>
+
         <section id="inicio">
-            <?php include 'pages/inicio.php' ?>
+            <?php include 'components/inicio/inicio.php' ?>
         </section>
 
         <section id="sobre_mi">
-            <?php include 'pages/sobre_mi.php' ?>
+            <?php include 'components/sobre_mi/sobre_mi.php' ?>
         </section>
 
         <section id="tecnologias">

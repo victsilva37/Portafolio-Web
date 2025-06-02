@@ -1,1 +1,0 @@
-<?php include 'components/sobre_mi/descripcion.php'?>

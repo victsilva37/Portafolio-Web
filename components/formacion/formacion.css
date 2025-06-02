@@ -1,6 +1,6 @@
 #form-main-container{
     background-color: #001D46;
-    padding: 20px;
+    padding: 30px;
 }
 
 #form-main-container h1{
@@ -14,6 +14,12 @@
     margin: auto;
     padding: 20px;
 }
+
+@media (max-width: 768px){
+        #form-main-container .form-item{
+            width: 70%;
+        }
+    }
 
 /*NOMBRE DE LA FORMACIÓN*/
 
@@ -34,6 +40,7 @@
     .form-logo{
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     .form-logo p{
@@ -42,6 +49,18 @@
         width: 70%;
     }
 
+    @media (max-width: 768px){
+        .form-logo p{
+            width: 100%;
+        }
+    }
+
     .form-logo img{
         max-height: 150px;
+    }
+
+    @media (max-width: 768px){
+        .form-logo img{
+            align-content: center;
+        }
     }

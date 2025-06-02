@@ -1,1 +1,0 @@
-<?php include 'components/inicio/resumen.php'?>

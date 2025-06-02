@@ -42,6 +42,8 @@
                 <p>No hay formaciones registradas.</p>
             <?php endif; ?>
         </div>
+        <br>
     </div>
+    
 </body>
 </html>

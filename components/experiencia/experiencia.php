@@ -46,7 +46,7 @@
                                             <img src="assets/<?php echo htmlspecialchars($icono); ?>" 
                                                 alt="<?php echo htmlspecialchars($nombre); ?>" 
                                                 style="width:20px; height:20px; margin-right:5px;">
-                                            <?php echo htmlspecialchars($nombre); ?>
+                                            <p><?php echo htmlspecialchars($nombre); ?></p>
                                         </li>
                                         <?php 
                                             endforeach;
@@ -55,7 +55,6 @@
                                             <li>N/A</li>
                                         <?php endif; ?>
                                 </ul>
-
                                 <li><?php echo htmlspecialchars($exp['modalidad']); ?></li>
                             </div>
                     </div>
