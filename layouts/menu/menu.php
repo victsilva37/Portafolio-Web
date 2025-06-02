@@ -3,24 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
-    <!--Link archivo CSS-->
+    <!-- Link archivo CSS -->
     <link rel="stylesheet" href="layouts/menu/menu.css">
+    <title>Menú Responsivo</title>
 </head>
 <body>
 
-    <!--MENÚ NAVIGATION-->
-    
+    <div id="menu-main-container">
 
-    <nav>
-        <a href="#inicio">INICIO</a>
-        <a href="#sobre_mi">SOBRE MÍ</a>
-        <a href="#tecnologias">TECNOLOGÍAS</a>
-        <a href="#experiencia">EXPERIENCIA</a>
-        <a href="#formacion">FORMACIÓN</a>
-        <a href="#proyectos">PROYECTOS</a>
-    </nav>
+        <!--BOTÓN MENÚ HAMBURGUESA-->
+
+            <div class="menu-toggle" id="menu-toggle">
+                <img src="assets/redes/logo_menu.png" alt="Menú">
+            </div>
+
+
+        <!--MENÚ NAVEGACIÓN-->
+
+            <ul id="menuNav">
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#sobre_mi">SOBRE MÍ</a></li>
+                <li><a href="#tecnologias">TECNOLOGÍAS</a></li>
+                <li><a href="#experiencia">EXPERIENCIA</a></li>
+                <li><a href="#formacion">FORMACIÓN</a></li>
+                <li><a href="#proyectos">PROYECTOS</a></li>
+            </ul>
+            
+    </div>
+
+    <!-- Link archivo JS -->
+    <script src="layouts/menu/menu.js"></script>
 
 </body>
 </html>
