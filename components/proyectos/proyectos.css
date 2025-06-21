@@ -1,5 +1,6 @@
 #proy-main-container{
     background-color: #001D46;
+    padding: 20px;
 }
 
 #proy-main-container h1{
@@ -14,10 +15,11 @@
     padding: 20px;
     display: flex;
     justify-content: space-around;
-    gap: 10px;  
+    gap: 10px;
+    margin-bottom: 100px;  
 }
 
-@media (max-width: 768px){
+@media (max-width: 1500px){
     #proy-main-container #proyectos-content{
         display: flex;
         flex-wrap: wrap;
@@ -34,7 +36,7 @@
         max-height: 700px; 
     }
 
-    @media (max-width:768px){
+    @media (max-width:1500px){
         .proyecto-item{
             width: 100%;
         }
@@ -75,7 +77,6 @@
     /*BANNER DEL PROYECTO*/
 
         #banner_img_proyecto{
-            background-color: red;
             margin: 0;
             padding: 0;
         }
@@ -84,6 +85,19 @@
             width: 100%;
             max-height: 200px;
             image-rendering: auto;
+        }
+
+        @media (max-width:1500px){
+
+            #banner_img_proyecto{
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                height: 200px;
+            }
+            #banner_img_proyecto img{
+                max-width: 250px;
+            }
         }
 
 

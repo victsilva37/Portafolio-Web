@@ -24,7 +24,7 @@
             <ul id="menuNav">
                 <li><a href="#inicio">INICIO</a></li>
                 <li><a href="#sobre_mi">SOBRE MÍ</a></li>
-                <li><a href="#tecnologias">TECNOLOGÍAS</a></li>
+                <li><a href="#habilidades">HABILIDADES</a></li>
                 <li><a href="#experiencia">EXPERIENCIA</a></li>
                 <li><a href="#formacion">FORMACIÓN</a></li>
                 <li><a href="#proyectos">PROYECTOS</a></li>

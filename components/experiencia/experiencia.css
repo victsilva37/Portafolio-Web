@@ -62,6 +62,11 @@
         flex-wrap: wrap;
     }
 
+
+    #tec-exp ul li p{
+        font-size: 10px;
+    }
+
      @media (max-width: 768px) {
         #tec-exp ul li p{
             display: none;

@@ -22,8 +22,8 @@
             <?php include 'components/sobre_mi/sobre_mi.php' ?>
         </section>
 
-        <section id="tecnologias">
-            <?php include 'components/tecnologias/tecnologias.php'?>
+        <section id="habilidades">
+            <?php include 'components/habilidades/habilidades.php'?>
         </section>
 
         <section id="experiencia">
@@ -37,6 +37,9 @@
         <section id="proyectos">
             <?php include 'components/proyectos/proyectos.php'?>
         </section>
+
+
+    <?php include 'layouts/footer/footer.php'?>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

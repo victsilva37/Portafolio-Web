@@ -10,9 +10,8 @@
         height: auto;
         margin: auto;
         display: flex;
-        grid-template-columns: repeat(5, 1fr); 
         flex-wrap: wrap;
-        justify-content: stretch;
+        justify-content: center;
         gap: 10px;
     }
 
