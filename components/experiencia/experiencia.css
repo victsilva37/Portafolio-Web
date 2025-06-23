@@ -54,7 +54,8 @@
     }
 
     #tec-exp ul{
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
         justify-content: start;
         gap: 25px;
         color: azure;
