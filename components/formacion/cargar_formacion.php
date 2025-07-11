@@ -1,16 +1,6 @@
 <?php
-// Conexión a la base de datos
-$servername = "localhost";
-$username = "root";
-$password = ""; // Cambia esto según tu configuración
-$dbname = "portafolio";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Verificar conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
+require_once 'conexion_db.php';
 
 // Consulta para obtener los datos de formación y sus logros
 $sql = "SELECT 
@@ -68,5 +58,4 @@ if ($result->num_rows > 0) {
 // Convertir a una lista numerada de formaciones
 $formaciones = array_values($formaciones);
 
-$conn->close();
 ?>

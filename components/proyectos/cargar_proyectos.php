@@ -1,16 +1,6 @@
 <?php
-// Conexión a la base de datos
-$servername = "localhost";
-$username = "root";
-$password = ""; // Cambia esto según tu configuración
-$dbname = "portafolio";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Verificar conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
+require_once 'conexion_db.php';
 
 // Consulta para obtener proyectos y sus tecnologías
 $sql = "
@@ -60,6 +50,5 @@ if ($result->num_rows > 0) {
         ];
     }
 }
-
 $conn->close();
 ?>

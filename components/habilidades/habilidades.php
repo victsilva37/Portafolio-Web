@@ -13,27 +13,129 @@
         <h1>Habilidades</h1>
         <br>
 
-        <!--Template: CONT-LENGUAJES-->
-        <?php include 'template/cont-lenguajes/cont-lenguajes.php'?>
+        <!--SECCIÓN: LENGUAJES-->
+
+            <h4>Lenguajes</h4>
+
+            <div id="tec-leng-content">
+                <?php
+                $_GET['tipo'] = 'Lenguaje';
+                include 'components/habilidades/server/cargar_tecnologias.php';
+                ?>
+
+                <?php if (!empty($tecnologias)): ?>
+                    <?php foreach ($tecnologias as $tec): ?>
+                        <div class="card-tecno-leng">
+                            <img id="img_tecno" src="assets/<?= $tec['icono'] ?>" alt="<?= $tec['nombre_tecnologia'] ?> icono">
+                            <h3><?= $tec['nombre_tecnologia'] ?></h3>
+                        </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p>No hay tecnologías registradas.</p>
+                <?php endif; ?>
+            </div>
+
+       <br><br>
+
+        <!--SECCIÓN: FRAMEWORKS-->
+
+            <h4>Frameworks & Tecnologías</h4>
+
+            <div id="tec-frameworks-content">
+                <?php
+                $_GET['tipo'] = 'Framework/Tecnologías';
+                include 'components/habilidades/server/cargar_tecnologias.php';
+                ?>
+
+                <?php if (!empty($tecnologias)): ?>
+                    <?php foreach ($tecnologias as $tec): ?>
+                        <div class="card-tecno-frame">
+                            <img id="img_tecno" src="assets/<?= $tec['icono'] ?>" alt="<?= $tec['nombre_tecnologia'] ?> icono">
+                            <h3><?= $tec['nombre_tecnologia'] ?></h3>
+                        </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p>No hay tecnologías registradas.</p>
+                <?php endif; ?>
+             </div>
         <br><br>
 
-        <!--Template: CONT-FRAMEWORKS-->
-        <?php include 'template/cont-frameworks/cont-frameworks.php'?>
-        <br><br> 
 
-        <!--Template: CONT-BASE-DATOS-->
-        <?php include 'template/cont-base-datos/cont-base-datos.php'?>
+
+        <!--SECCIÓN: BASE DE DATOS-->
+
+            <h4>Bases de datos</h4>
+
+            <div id="tec-bd-content">
+                <?php
+                $_GET['tipo'] = 'Base de datos';
+                include 'components/habilidades/server/cargar_tecnologias.php';
+                ?>
+
+                <?php if (!empty($tecnologias)): ?>
+                    <?php foreach ($tecnologias as $tec): ?>
+                        <div class="card-tecno-bd">
+                            <img id="img_tecno" src="assets/<?= $tec['icono'] ?>" alt="<?= $tec['nombre_tecnologia'] ?> icono">
+                            <h3><?= $tec['nombre_tecnologia'] ?></h3>
+                        </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p>No hay tecnologías registradas.</p>
+                <?php endif; ?>
+            </div>
+
         <br><br>
 
-        <!--Template: CONT-HERRAMIENTAS-->
-        <?php include 'template/cont-herramientas/cont-herramientas.php'?>
+
+
+        <!--SECCIÓN: HERRAMIENTAS-->
+
+            <h4>Herramientas</h4>
+
+            <div id="tec-her-content">
+                <?php
+                $_GET['tipo'] = 'Herramienta';
+                include 'components/habilidades/server/cargar_tecnologias.php';
+                ?>
+
+                <?php if (!empty($tecnologias)): ?>
+                    <?php foreach ($tecnologias as $tec): ?>
+                        <div class="card-tecno-her">
+                            <img id="img_tecno" src="assets/<?= $tec['icono'] ?>" alt="<?= $tec['nombre_tecnologia'] ?> icono">
+                            <h3><?= $tec['nombre_tecnologia'] ?></h3>
+                        </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p>No hay tecnologías registradas.</p>
+                <?php endif; ?>
+            </div>
+
         <br><br>
 
-        <!--Template: CONT-OTRAS-->
-        <?php include 'template/cont-otras/cont-otras.php'?>
-        <br><br>
 
-        
+        <!--SECCIÓN: OTRAS-->
+
+             <h4>Otras</h4>
+
+            <div id="tec-otr-content">
+                <?php
+                $_GET['tipo'] = 'Otras';
+                include 'components/habilidades/server/cargar_tecnologias.php';
+                ?>
+
+                <?php if (!empty($tecnologias)): ?>
+                    <?php foreach ($tecnologias as $tec): ?>
+                        <div class="card-tecno-otr">
+                            <img id="img_tecno" src="assets/<?= $tec['icono'] ?>" alt="<?= $tec['nombre_tecnologia'] ?> icono">
+                            <h3><?= $tec['nombre_tecnologia'] ?></h3>
+                        </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p>No hay tecnologías registradas.</p>
+                <?php endif; ?>
+            </div>
+            
+        <br><br>
 
     </div>
 </body>
