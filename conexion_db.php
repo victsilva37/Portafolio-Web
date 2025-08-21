@@ -1,21 +1,19 @@
-<?php 
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-        ini_set('display_errors', 1);
-        ini_set('display_startup_errors', 1);
-        error_reporting(E_ALL);
-    // Cargar variables de entorno desde .env
-    if (file_exists(__DIR__ . '/.env')) {
-        $env = parse_ini_file(__DIR__ . '/.env');
-        $servername = $env['DB_HOST'] ?? 'localhost';
-        $username = $env['DB_USER'] ?? 'root';
-        $password = $env['DB_PASS'] ?? '';
-        $dbname = $env['DB_NAME'] ?? 'portafolio';
-    }
+$host = getenv('DB_HOST');
+$port = getenv('DB_PORT');
+$dbname = getenv('DB_NAME');
+$user = getenv('DB_USER');
+$pass = getenv('DB_PASS');
 
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Verificar conexión
-    if ($conn->connect_error) {
-        die("Conexión fallida: " . $conn->connect_error);
-    }
+try {
+    $conn = new PDO("pgsql:host=$host;port=$port;dbname=$dbname", $user, $pass);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // echo "Conexión exitosa"; // Para pruebas
+} catch (PDOException $e) {
+    die("Conexión fallida: " . $e->getMessage());
+}
 ?>
