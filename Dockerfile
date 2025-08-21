@@ -1,15 +1,20 @@
-# Usa la imagen oficial de PHP con servidor embebido
-FROM php:8.2-cli
+# Usa la imagen oficial de PHP con Apache
+FROM php:8.2-apache
 
-# Instala extensiones comunes si necesitas MySQL
+# Instala extensiones necesarias (mysqli, pdo_mysql)
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-# Copia todos los archivos del proyecto al contenedor
-COPY . /app
-WORKDIR /app
+# Copia todo el proyecto a la carpeta raíz de Apache
+COPY . /var/www/html/
 
-# Expone el puerto que usaremos para acceder
-EXPOSE 3000
+# Asegúrate de que Apache pueda reescribir URLs si necesitas rutas amigables
+RUN a2enmod rewrite
 
-# Comando para iniciar tu portafolio
-CMD ["php", "-S", "0.0.0.0:3000", "-t", "."]
+# Cambia permisos si es necesario
+RUN chown -R www-data:www-data /var/www/html/
+
+# Expone el puerto 80 (Apache)
+EXPOSE 80
+
+# Comando por defecto para iniciar Apache en primer plano
+CMD ["apache2-foreground"]
