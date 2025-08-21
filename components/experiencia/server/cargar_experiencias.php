@@ -20,7 +20,12 @@ $sql = "
     LEFT JOIN experiencia_tecnologia et ON e.id_exp = et.id_exp
     LEFT JOIN tecnologias t ON et.id_tecnologia = t.id_tecnologia
     GROUP BY e.id_exp
+    ORDER BY 
+        e.fecha_final IS NULL DESC,
+        e.fecha_final DESC,          
+        e.fecha_inicio DESC          
 ";
+
 
 // Preparar y ejecutar
 $stmt = $conn->prepare($sql);
