@@ -1,22 +1,22 @@
 <?php
-    require_once 'conexion_db.php';
+require_once 'conexion_db.php';
 
-    // Tipo dinámico
-    $tipo = isset($_GET['tipo']) ? $_GET['tipo'] : 'Frontend';
+// Tipo dinámico
+$tipo = isset($_GET['tipo']) ? $_GET['tipo'] : 'Frontend';
 
-    // Consulta para obtener tecnologías según el tipo
-    $sql = "SELECT nombre_tecnologia, tipo, icono FROM tecnologias WHERE tipo = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $tipo);
-    $stmt->execute();
-    $result = $stmt->get_result();
+// Consulta para obtener tecnologías según el tipo
+$sql = "SELECT nombre_tecnologia, tipo, icono FROM tecnologias WHERE tipo = :tipo";
+$stmt = $conn->prepare($sql);
+$stmt->bindValue(':tipo', $tipo, PDO::PARAM_STR);
+$stmt->execute();
 
-    $tecnologias = [];
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $tecnologias[] = $row;
-        }
-    }
+// Obtener resultados
+$tecnologias = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    $stmt->close();
+// Ejemplo de uso:
+// foreach($tecnologias as $tec) {
+//     echo $tec['nombre_tecnologia'] . "<br>";
+// }
+
+// No hace falta cerrar el statement ni la conexión, PDO los maneja automáticamente
 ?>
