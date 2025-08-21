@@ -10,18 +10,22 @@ $sql = "
         p.img_proyecto, 
         p.link_repo, 
         p.estado,
-        STRING_AGG(DISTINCT t.nombre_tecnologia || '|' || t.icono, ',' ORDER BY t.nombre_tecnologia ASC) AS tecnologias
+        (
+            SELECT STRING_AGG(tecnologias.tecnologia, ',' ORDER BY tecnologias.tecnologia ASC)
+            FROM (
+                SELECT DISTINCT t.nombre_tecnologia || '|' || t.icono AS tecnologia
+                FROM proyecto_tecnologias pt2
+                JOIN tecnologias t ON pt2.id_tecnologia = t.id_tecnologia
+                WHERE pt2.id_proyecto = p.id_proyecto
+            ) AS tecnologias
+        ) AS tecnologias
     FROM 
         proyectos p
-    LEFT JOIN 
-        proyecto_tecnologias pt ON p.id_proyecto = pt.id_proyecto
-    LEFT JOIN 
-        tecnologias t ON pt.id_tecnologia = t.id_tecnologia
     GROUP BY 
         p.id_proyecto, p.nombre_proyecto, p.desc_proyecto, p.img_proyecto, p.link_repo, p.estado
     ORDER BY 
-        p.nombre_proyecto ASC
-";
+        p.nombre_proyecto ASC;
+    ";
 
 // Preparar y ejecutar
 $stmt = $conn->prepare($sql);
