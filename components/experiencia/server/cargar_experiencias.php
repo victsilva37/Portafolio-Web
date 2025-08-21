@@ -1,30 +1,36 @@
 <?php
-   require_once 'conexion_db.php';
+require_once 'conexion_db.php';
 
-    // Consulta para obtener las experiencias y tecnologías relacionadas
-    $sql = "
-        SELECT 
-            e.id_exp,
-            e.cargo_exp,
-            e.nombre_empresa,
-            e.direccion,
-            e.modalidad,
-            DATE_FORMAT(e.fecha_inicio, '%M %Y') AS fecha_inicio,
-            IF(e.fecha_final IS NOT NULL, DATE_FORMAT(e.fecha_final, '%M %Y'), 'Actual') AS fecha_final,
-            e.desc_exp,
-            GROUP_CONCAT(CONCAT(t.nombre_tecnologia, '|', t.icono) SEPARATOR ',') AS tecnologias
-        FROM experiencia e
-        LEFT JOIN experiencia_tecnologia et ON e.id_exp = et.id_exp
-        LEFT JOIN tecnologias t ON et.id_tecnologia = t.id_tecnologia
-        GROUP BY e.id_exp
-    ";
+// Consulta para obtener las experiencias y tecnologías relacionadas
+$sql = "
+    SELECT 
+        e.id_exp,
+        e.cargo_exp,
+        e.nombre_empresa,
+        e.direccion,
+        e.modalidad,
+        TO_CHAR(e.fecha_inicio, 'Mon YYYY') AS fecha_inicio,
+        CASE 
+            WHEN e.fecha_final IS NOT NULL THEN TO_CHAR(e.fecha_final, 'Mon YYYY')
+            ELSE 'Actual'
+        END AS fecha_final,
+        e.desc_exp,
+        STRING_AGG(t.nombre_tecnologia || '|' || t.icono, ',') AS tecnologias
+    FROM experiencia e
+    LEFT JOIN experiencia_tecnologia et ON e.id_exp = et.id_exp
+    LEFT JOIN tecnologias t ON et.id_tecnologia = t.id_tecnologia
+    GROUP BY e.id_exp
+";
 
-    $result = $conn->query($sql);
+// Preparar y ejecutar
+$stmt = $conn->prepare($sql);
+$stmt->execute();
 
-    $experiencias = [];
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $experiencias[] = $row;
-        }
-    }
+// Obtener resultados
+$experiencias = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Ejemplo de uso:
+// foreach($experiencias as $exp) {
+//     echo $exp['cargo_exp'] . " - " . $exp['tecnologias'] . "<br>";
+// }
 ?>

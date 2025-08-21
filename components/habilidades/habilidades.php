@@ -43,7 +43,7 @@
 
             <div id="tec-frameworks-content">
                 <?php
-                $_GET['tipo'] = 'Framework/Tecnologías';
+                $_GET['tipo'] = 'Framework/Tecnologias';
                 include 'components/habilidades/server/cargar_tecnologias.php';
                 ?>
 
