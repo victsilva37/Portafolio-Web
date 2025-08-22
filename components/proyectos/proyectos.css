@@ -21,6 +21,7 @@
 
 @media (max-width: 1500px){
     #proy-main-container #proyectos-content{
+        width: 85%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -31,9 +32,9 @@
 /*TARJETAS DE PROYECTOS*/
 
     .proyecto-item{
-        width: 30%;
+        width: 50%;
         padding: 10px;
-        max-height: 700px; 
+        max-height: 800px; 
     }
 
     @media (max-width:1500px){
@@ -93,10 +94,11 @@
                 margin: auto;
                 display: flex;
                 justify-content: center;
-                height: 200px;
+                height: 300px;
             }
             #banner_img_proyecto img{
                 max-width: 250px;
+                max-height: 250px;
             }
         }
 

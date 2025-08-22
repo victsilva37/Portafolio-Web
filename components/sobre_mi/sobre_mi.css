@@ -24,8 +24,8 @@
     font-size: 20px;
 }
 
- @media (max-width: 768px) {
+ @media (max-width: 1200px) {
     #main-desc-container p{
-        width: 70%;
+        width: 90%;
     }
  }

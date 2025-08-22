@@ -49,7 +49,7 @@
         width: 70%;
     }
 
-    @media (max-width: 1500px){
+    @media (max-width: 768px){
         .form-logo p{
             width: 100%;
         }
@@ -59,8 +59,9 @@
         max-height: 150px;
     }
 
-    @media (max-width: 1500px){
+    @media (max-width: 768px){
         .form-logo img{
+            max-width: 200px;
             align-content: center;
         }
     }
