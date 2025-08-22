@@ -55,7 +55,9 @@
                                             <li>N/A</li>
                                         <?php endif; ?>
                                 </ul>
-                                <li><?php echo htmlspecialchars($exp['modalidad']); ?></li>
+                  
+                                <!--Modalidad-->
+                                <li id="li-modalidad"><?php echo htmlspecialchars($exp['modalidad']); ?></li>
                             </div>
                     </div>
                     <br>                        
